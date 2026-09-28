@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0757b8">
+<title>DIAMOND AUTOMOBILES | Bajaj Genuine Two-Wheeler Spare Parts</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#0757b8;color:#fff;line-height:1.55}
+a{text-decoration:none;color:inherit}
+button,input,select{font:inherit}
+button{cursor:pointer}
+:root{--blue:#0757b8;--dark:#043b83;--gold:#f3c64d;--white:#fff;--green:#18b978}
+
+header{
+ position:sticky;top:0;z-index:100;
+ background:#064a9e;
+ border-bottom:2px solid rgba(255,255,255,.25);
+ box-shadow:0 3px 15px rgba(0,0,0,.15)
+}
+.nav{
+ min-height:88px;width:min(1180px,94%);margin:auto;
+ display:flex;align-items:center;justify-content:space-between;gap:12px
+}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.logo-box{
+ width:70px;height:70px;display:flex;align-items:center;justify-content:center;
+ overflow:hidden;border-radius:12px
+}
+.logo-box img{
+ width:100%;height:100%;object-fit:contain;display:block
+}
+.brand-name{font-size:21px;font-weight:900;letter-spacing:1px;color:#fff}
+.navlinks{display:flex;gap:20px;font-weight:800;font-size:14px}
+.navlinks a:hover{color:var(--gold)}
+.header-actions{display:flex;gap:10px}
+.cart-btn,.menu-btn{
+ width:70px;height:64px;border:1px solid rgba(255,255,255,.4);
+ background:#0757b8;color:#fff;border-radius:17px;font-weight:900
+}
+.cart-btn{font-size:24px}.cart-count{display:block;font-size:16px}
+.menu-btn{display:none;font-size:28px}
+
+.hero{background:#0757b8}
+.hero-banner-wrap{width:100%;overflow:hidden}
+.hero-banner{width:100%;display:block;height:auto}
+.home-copy{text-align:center;padding:35px 5% 20px}
+.tagline{font-size:32px;font-weight:950}
+.welcome{font-size:20px;margin:10px auto;max-width:900px;color:#f2f7ff}
+.hero-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:24px 0}
+.btn{
+ min-width:230px;padding:14px 20px;border:2px solid #fff;border-radius:15px;
+ color:#fff;background:#0757b8;font-weight:900;transition:.2s
+}
+.btn:hover{background:#fff;color:#0757b8;transform:translateY(-2px)}
+.info-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;padding:0 4% 45px}
+.info-card{
+ background:#0757b8;border:2px solid #fff;border-left:7px solid var(--gold);
+ border-radius:18px;padding:17px 22px;min-width:330px;text-align:left;
+ box-shadow:0 6px 18px rgba(0,0,0,.16)
+}
+.info-title{color:var(--gold);font-size:17px;font-weight:900;margin-bottom:5px}
+.info-text{color:#fff;font-weight:900}
+.status-open{color:#7ff0a7!important}
+
+section{padding:60px 4%;background:#0757b8}
+.why{background:#0757b8}
+.section-head{text-align:center;margin-bottom:30px}
+.section-head h2{font-size:36px;color:#fff;font-weight:950}
+.section-head p{color:#fff;font-size:18px;margin-top:6px}
+.gold{color:var(--gold)!important}
+
+.why-grid{
+ width:min(900px,100%);margin:auto;
+ display:grid;grid-template-columns:repeat(2,1fr);gap:15px
+}
+.why-card{
+ background:#0757b8;border:2px solid rgba(255,255,255,.95);
+ border-left:6px solid var(--gold);border-radius:18px;padding:20px;
+ min-height:145px;box-shadow:0 6px 18px rgba(0,0,0,.13)
+}
+.why-card .icon{font-size:30px}
+.why-card h3{font-size:18px;color:var(--gold);margin:5px 0}
+.why-card p{font-size:14px;color:#fff}
+
+.categories{
+ display:grid;grid-template-columns:repeat(5,1fr);gap:13px;
+ width:min(1180px,100%);margin:auto
+}
+.cat{
+ border:2px solid rgba(255,255,255,.8);border-radius:17px;
+ padding:18px;text-align:center;background:#0757b8
+}
+.cat-icon{font-size:30px}.cat b{display:block;color:var(--gold);margin-top:6px}
+
+.products{background:#064fa8}
+.toolbar{
+ width:min(1180px,100%);margin:0 auto 20px;
+ display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:10px
+}
+.field{padding:13px;border-radius:12px;border:1px solid #d5e3f2;background:#fff;color:#17314d}
+.product-grid{
+ width:min(1180px,100%);margin:auto;
+ display:grid;grid-template-columns:repeat(3,1fr);gap:17px
+}
+.product{background:#fff;color:#10243a;border-radius:18px;overflow:hidden}
+.product-img{
+ height:175px;background:linear-gradient(135deg,#edf7ff,#d8ebff);
+ display:grid;place-items:center;font-size:60px
+}
+.product-body{padding:17px}
+.product-body h3{font-size:18px}
+.availability{font-size:13px;font-weight:900;margin:8px 0}
+.available{color:#078346}.out{color:#c62828}
+.small-btn{
+ padding:10px 13px;border:0;border-radius:10px;
+ background:#0757b8;color:#fff;font-weight:900
+}
+
+.panel{
+ background:#0757b8;border:2px solid #fff;border-left:6px solid var(--gold);
+ border-radius:18px;padding:24px
+}
+.about-grid,.contact-grid{
+ width:min(1000px,100%);margin:auto;
+ display:grid;grid-template-columns:1fr 1fr;gap:20px
+}
+.panel h2{color:var(--gold);margin-bottom:8px}
+.panel p{color:#fff}
+
+.faq{background:#064fa8}
+details{
+ background:#0757b8;border:1px solid rgba(255,255,255,.6);
+ border-radius:14px;padding:14px 17px;margin:10px auto;
+ max-width:1000px
+}
+summary{font-weight:900;color:#fff;cursor:pointer}
+details p{color:#fff;padding-top:9px}
+
+footer{background:#043b83;padding:35px 4% 22px}
+.footer-grid{
+ width:min(1100px,100%);margin:auto;
+ display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:25px
+}
+.footer-grid h3{color:var(--gold);margin-bottom:8px}
+.footer-grid p{color:#fff}
+.copyright{text-align:center;border-top:1px solid rgba(255,255,255,.2);margin-top:22px;padding-top:15px}
+
+.float-wa{
+ position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;
+ background:var(--green);border:2px solid #fff;display:grid;place-items:center;
+ font-size:26px;z-index:90;box-shadow:0 5px 16px rgba(0,0,0,.25)
+}
+
+.modal{
+ position:fixed;inset:0;background:rgba(0,10,30,.75);
+ display:none;align-items:center;justify-content:center;padding:18px;z-index:200
+}
+.modal.open{display:flex}
+.modal-card{
+ width:min(600px,100%);max-height:90vh;overflow:auto;
+ background:#fff;color:#10243a;border-radius:20px;padding:23px
+}
+.modal-top{display:flex;justify-content:space-between;align-items:center}
+.modal-top h2{color:#0757b8}
+.close{border:0;background:#edf5fc;color:#0757b8;width:38px;height:38px;border-radius:10px;font-weight:900}
+.share-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin-top:18px}
+.share-option{
+ border:1.5px solid #0757b8;background:#0757b8;color:#fff;
+ border-radius:13px;padding:13px 10px;font-weight:900
+}
+.share-option:hover{background:#fff;color:#0757b8}
+.share-note{font-size:12px;color:#53677c;margin-top:12px;text-align:center}
+.modal-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+
+@media(max-width:900px){
+ .categories{grid-template-columns:repeat(2,1fr)}
+ .product-grid{grid-template-columns:repeat(2,1fr)}
+ .about-grid,.contact-grid{grid-template-columns:1fr}
+ .navlinks{display:none}
+ .menu-btn{display:block}
+}
+@media(max-width:650px){
+ .nav{min-height:88px}
+ .logo-box{width:68px;height:68px}
+ .brand-name{font-size:19px;max-width:155px}
+ .cart-btn,.menu-btn{width:64px;height:60px}
+ .tagline{font-size:28px}
+ .welcome{font-size:17px}
+ .hero-actions{flex-direction:column;align-items:stretch}
+ .btn{width:100%}
+ .info-card{width:100%;min-width:0}
+ .why-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+ .why-card{padding:14px;min-height:145px}
+ .why-card h3{font-size:15px}
+ .why-card p{font-size:12px}
+ .categories,.product-grid{grid-template-columns:1fr}
+ .toolbar{grid-template-columns:1fr}
+ .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+  <a class="brand" href="#home">
+    <div class="logo-box">
+      <img src="diamond-logo.png" alt="Diamond">
+    </div>
+    <div class="brand-name">DIAMOND<br>AUTOMOBILES</div>
+  </a>
+
+  <nav class="navlinks" id="navlinks">
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="cart-btn" onclick="openCart()">🛒<span class="cart-count" id="cartBadge">0</span></button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </div>
+</div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="hero-banner-wrap">
+    <img src="banner.jpg" class="hero-banner" alt="Diamond Automobiles Banner">
+  </div>
+
+  <div class="home-copy">
+    <h1 class="tagline">Bajaj Genuine Two-Wheeler Spare Parts Available</h1>
+    <p class="welcome">Your Trusted Destination for Bajaj Genuine Two-Wheeler Spare Parts & Accessories.</p>
+
+    <div class="hero-actions">
+      <button class="btn" onclick="document.getElementById('products').scrollIntoView()">🛠️ View Products →</button>
+      <a class="btn" href="tel:9059492317">📞 Call Shop</a>
+      <button class="btn" onclick="openShare()">📤 Share Website</button>
+    </div>
+  </div>
+
+  <div class="info-row">
+    <div class="info-card">
+      <div class="info-title">📍 LOCATION</div>
+      <div class="info-text">#14-8-165, Beside D-Mart line,<br>Narsampet Road, Warangal,<br>Telangana – 506002</div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-title">◷ SHOP TIMINGS</div>
+      <div class="info-text">Open Daily · 10:00 AM – 9:00 PM<br><span id="statusText" class="status-open">🟢 Open Now</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="section-head">
+    <h2>Why Choose Diamond Automobiles?</h2>
+    <p>Reliable two-wheeler spare parts and accessories.</p>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-card"><div class="icon">💎</div><h3>Bajaj Genuine Parts</h3><p>Quality-focused spare parts.</p></div>
+    <div class="why-card"><div class="icon">🚚</div><h3>Fast & Reliable Service</h3><p>Convenient local shop support.</p></div>
+    <div class="why-card"><div class="icon">⚙️</div><h3>Wide Range of Products</h3><p>Spare parts and accessories.</p></div>
+    <div class="why-card"><div class="icon">🛡️</div><h3>Two-Wheeler Support</h3><p>Products for everyday needs.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>Our Categories</h2>
+    <p>Everything for your two-wheeler needs.</p>
+  </div>
+  <div class="categories">
+    <div class="cat"><div class="cat-icon">🛡️</div><b>Genuine Parts</b></div>
+    <div class="cat"><div class="cat-icon">💧</div><b>Engine Oils & Lubricants</b></div>
+    <div class="cat"><div class="cat-icon">💡</div><b>Parking Bulbs</b></div>
+    <div class="cat"><div class="cat-icon">🧴</div><b>Spray Bottles</b></div>
+    <div class="cat"><div class="cat-icon">🛠️</div><b>Extra Accessories</b></div>
+  </div>
+</section>
+
+<section id="products" class="products">
+  <div class="section-head">
+    <h2>Our Products</h2>
+    <p>Browse available products.</p>
+  </div>
+
+  <div class="toolbar">
+    <input id="search" class="field" placeholder="Search Products..." oninput="renderProducts()">
+    <select id="category" class="field" onchange="renderProducts()">
+      <option>All</option>
+      <option>Extra Accessories</option>
+      <option>Parking Bulbs</option>
+      <option>Spray Bottles</option>
+      <option>Engine Oils & Lubricants</option>
+      <option>Bike Spare Parts</option>
+    </select>
+    <select id="availability" class="field" onchange="renderProducts()">
+      <option>All</option><option>Available</option><option>Out of Stock</option>
+    </select>
+    <select id="sort" class="field" onchange="renderProducts()">
+      <option value="az">A–Z</option><option value="za">Z–A</option>
+      <option value="available">Available First</option>
+    </select>
+  </div>
+
+  <div id="productGrid" class="product-grid"></div>
+</section>
+
+<section>
+  <div class="about-grid">
+    <div class="panel">
+      <h2>About Diamond Automobiles</h2>
+      <p>Diamond Automobiles provides Bajaj Genuine Two-Wheeler Spare Parts and useful accessories for customers in Warangal.</p>
+    </div>
+    <div class="panel">
+      <h2>Shop Timings</h2>
+      <p>Open Daily · 10:00 AM – 9:00 PM</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="section-head"><h2>Frequently Asked Questions</h2></div>
+  <details><summary>What products are available?</summary><p>Bike spare parts, engine oils, parking bulbs, spray bottles and extra accessories.</p></details>
+  <details><summary>Where is the shop located?</summary><p>#14-8-165, Beside D-Mart line, Narsampet Road, Warangal, Telangana – 506002</p></details>
+  <details><summary>What are the shop timings?</summary><p>Open Daily · 10:00 AM – 9:00 PM</p></details>
+</section>
+
+<section id="contact">
+  <div class="section-head"><h2>Contact Us</h2></div>
+  <div class="contact-grid">
+    <div class="panel">
+      <h2>Call Us</h2>
+      <p>📞 <a href="tel:9059492317">9059492317</a></p>
+      <p>📞 <a href="tel:9652878092">9652878092</a></p>
+      <p>💬 <a href="https://wa.me/919059492317" target="_blank">Chat on WhatsApp</a></p>
+    </div>
+    <div class="panel">
+      <h2>Shop Address</h2>
+      <p>#14-8-165,<br>Beside D-Mart line,<br>Narsampet Road, Warangal,<br>Telangana – 506002</p>
+      <br>
+      <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=14-8-165%20Narsampet%20Road%20Warangal%20Telangana%20506002">📍 Get Directions</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div><h3>DIAMOND AUTOMOBILES</h3><p>Bajaj Genuine Two-Wheeler Spare Parts Available</p></div>
+    <div><h3>Contact</h3><p>9059492317</p><p>9652878092</p></div>
+    <div><h3>Address</h3><p>#14-8-165,<br>Beside D-Mart line,<br>Narsampet Road, Warangal,<br>Telangana – 506002</p></div>
+  </div>
+  <div class="copyright">© 2026 Diamond Automobiles. All Rights Reserved.</div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/919059492317" target="_blank">💬</a>
+
+<!-- SHARE MODAL -->
+<div id="shareModal" class="modal">
+  <div class="modal-card">
+    <div class="modal-top">
+      <h2>Share Diamond Automobiles</h2>
+      <button class="close" onclick="closeShare()">✕</button>
+    </div>
+    <p style="margin-top:8px">Choose where you want to share the website:</p>
+
+    <div class="share-grid">
+      <button class="share-option" onclick="shareWhatsApp()">💬 WhatsApp</button>
+      <button class="share-option" onclick="shareFacebook()">📘 Facebook</button>
+      <button class="share-option" onclick="shareX()">𝕏 Twitter / X</button>
+      <button class="share-option" onclick="shareInstagram()">📸 Instagram</button>
+      <button class="share-option" onclick="shareYouTube()">▶️ YouTube</button>
+      <button class="share-option" onclick="shareTelegram()">✈️ Telegram</button>
+      <button class="share-option" onclick="nativeShare()">📤 Other Apps</button>
+      <button class="share-option" onclick="copyLink()">🔗 Copy Link</button>
+    </div>
+
+    <p class="share-note">Instagram and YouTube do not provide a universal webpage-share link, so their buttons copy the website link and open the service.</p>
+  </div>
+</div>
+
+<!-- CART MODAL -->
+<div id="cartModal" class="modal">
+  <div class="modal-card">
+    <div class="modal-top">
+      <h2>Your Cart</h2>
+      <button class="close" onclick="closeCart()">✕</button>
+    </div>
+    <p id="cartSummary" style="margin-top:8px">Your cart is empty</p>
+    <div id="cartList"></div>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeCart()">Continue Shopping</button>
+      <button class="btn" onclick="clearCart()">Clear Cart</button>
+      <button class="btn" onclick="whatsAppCart()">💬 WhatsApp Order</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const products=[
+ {id:'grip-covers',name:'Grip Covers',cat:'Extra Accessories',available:true,icon:'🛞'},
+ {id:'engine-guard',name:'Engine Guard',cat:'Extra Accessories',available:true,icon:'⚙️'},
+ {id:'ladies-footrest',name:'Ladies Footrest',cat:'Extra Accessories',available:true,icon:'🔩'},
+ {id:'parking-bulbs',name:'Parking Bulbs — All Colours Available',cat:'Parking Bulbs',available:true,icon:'💡'},
+ {id:'spray-bottles',name:'Spray Bottles — All Colours Available',cat:'Spray Bottles',available:true,icon:'🧴'},
+ {id:'engine-oil',name:'Engine Oil & Lubricants',cat:'Engine Oils & Lubricants',available:true,icon:'🛢️'},
+ {id:'bike-parts',name:'Bajaj Bike Spare Parts',cat:'Bike Spare Parts',available:true,icon:'🏍️'}
+];
+
+let cart=JSON.parse(localStorage.getItem('diamond_cart')||'{}');
+
+function saveCart(){
+ localStorage.setItem('diamond_cart',JSON.stringify(cart));
+ updateBadge();
+}
+
+function updateBadge(){
+ const n=Object.values(cart).reduce((a,b)=>a+b,0);
+ document.getElementById('cartBadge').textContent=n;
+}
+
+function renderProducts(){
+ const q=document.getElementById('search').value.toLowerCase().trim();
+ const c=document.getElementById('category').value;
+ const a=document.getElementById('availability').value;
+ const s=document.getElementById('sort').value;
+
+ let arr=products.filter(p=>
+  (!q||p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)) &&
+  (c==='All'||p.cat===c) &&
+  (a==='All'||(a==='Available'?p.available:!p.available))
+ );
+
+ arr.sort((x,y)=>{
+  if(s==='az') return x.name.localeCompare(y.name);
+  if(s==='za') return y.name.localeCompare(x.name);
+  return Number(y.available)-Number(x.available);
+ });
+
+ document.getElementById('productGrid').innerHTML=arr.length
+ ?arr.map(p=>`
+  <article class="product">
+   <div class="product-img">${p.icon}</div>
+   <div class="product-body">
+    <h3>${p.name}</h3>
+    <div class="availability ${p.available?'available':'out'}">${p.available?'🟢 AVAILABLE':'🔴 OUT OF STOCK'}</div>
+    <button class="small-btn" onclick="addToCart('${p.id}')">🛒 Add to Cart</button>
+   </div>
+  </article>`).join('')
+ : '<p>No matching products yet.</p>';
+
+ updateBadge();
+}
+
+function addToCart(id){
+ cart[id]=Math.min(10,(cart[id]||0)+1);
+ saveCart();
+ alert('Product added to cart.');
+}
+
+function openCart(){
+ renderCart();
+ document.getElementById('cartModal').classList.add('open');
+}
+function closeCart(){document.getElementById('cartModal').classList.remove('open')}
+
+function renderCart(){
+ const items=Object.entries(cart)
+  .map(([id,q])=>({p:products.find(x=>x.id===id),q}))
+  .filter(x=>x.p);
+
+ document.getElementById('cartSummary').textContent=
+  items.length?`${items.reduce((a,x)=>a+x.q,0)} item(s) selected`:'Your cart is empty';
+
+ document.getElementById('cartList').innerHTML=items.length
+ ?items.map(x=>`
+  <div style="display:flex;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid #ddd">
+   <span style="font-size:30px">${x.p.icon}</span>
+   <div><b>${x.p.name}</b><br>Quantity: ${x.q}</div>
+  </div>`).join('')
+ :'<p style="padding:18px 0">Your cart is empty.</p>';
+}
+
+function clearCart(){cart={};saveCart();renderCart()}
+
+function whatsAppCart(){
+ const items=Object.entries(cart)
+  .map(([id,q])=>({p:products.find(x=>x.id===id),q}))
+  .filter(x=>x.p);
+
+ if(!items.length){alert('Your cart is empty.');return}
+
+ const msg='Hello Diamond Automobiles,\\nI want to order:\\n\\n'+
+ items.map(x=>`• ${x.p.name} × ${x.q}`).join('\\n');
+
+ window.open('https://wa.me/919059492317?text='+encodeURIComponent(msg),'_blank');
+}
+
+function openShare(){document.getElementById('shareModal').classList.add('open')}
+function closeShare(){document.getElementById('shareModal').classList.remove('open')}
+
+function shareData(){
+ return {
+  title:'DIAMOND AUTOMOBILES',
+  text:'Bajaj Genuine Two-Wheeler Spare Parts Available — Diamond Automobiles, Warangal',
+  url:location.href
+ };
+}
+
+function openShareUrl(url){window.open(url,'_blank','noopener,noreferrer')}
+function shareWhatsApp(){openShareUrl('https://wa.me/?text='+encodeURIComponent(shareData().text+'\\n'+shareData().url))}
+function shareFacebook(){openShareUrl('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href))}
+function shareX(){openShareUrl('https://twitter.com/intent/tweet?text='+encodeURIComponent(shareData().text)+'&url='+encodeURIComponent(location.href))}
+function shareTelegram(){openShareUrl('https://t.me/share/url?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(shareData().text))}
+
+function copyLink(){
+ if(navigator.clipboard){
+  navigator.clipboard.writeText(location.href).then(()=>alert('Website link copied!'));
+ }else{
+  prompt('Copy this website link:',location.href);
+ }
+}
+
+function shareInstagram(){
+ copyLink();
+ setTimeout(()=>openShareUrl('https://www.instagram.com/'),400);
+}
+function shareYouTube(){
+ copyLink();
+ setTimeout(()=>openShareUrl('https://www.youtube.com/'),400);
+}
+function nativeShare(){
+ if(navigator.share) navigator.share(shareData()).catch(()=>{});
+ else copyLink();
+}
+
+function toggleMenu(){
+ const n=document.getElementById('navlinks');
+ if(getComputedStyle(n).display==='none'){
+  n.style.display='flex';
+  n.style.position='absolute';
+  n.style.top='88px';
+  n.style.left='0';
+  n.style.right='0';
+  n.style.background='#064a9e';
+  n.style.padding='18px 5%';
+  n.style.flexDirection='column';
+ }else{
+  n.style.display='none';
+ }
+}
+
+function updateStatus(){
+ const h=new Date().getHours();
+ const s=document.getElementById('statusText');
+ if(h>=10&&h<21){
+  s.textContent='🟢 Open Now';
+  s.className='status-open';
+ }else{
+  s.textContent='🔴 Closed Now';
+  s.className='';
+ }
+}
+
+renderProducts();
+updateStatus();
+setInterval(updateStatus,60000);
+</script>
+</body>
+</html>
